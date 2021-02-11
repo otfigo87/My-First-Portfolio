@@ -1,0 +1,115 @@
+html, body {
+  margin: 0;
+   height: 100%;
+   overflow: hidden
+  }
+
+.wall {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.wall-row {
+  z-index: -99;
+  display: flex;
+  animation: 200s linear ticker-to-left infinite;
+}
+  
+  .wall-row:nth-child(even) {
+    animation: 200s linear ticker-to-right infinite;
+    justify-content: flex-end;
+  }
+  
+
+  .wall-row span {
+    margin-right: 0.2em;
+    font-family: sans-serif;
+    color: transparent;
+    font-size: 13vh;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #f5f5f5;
+  }
+  
+
+
+@keyframes ticker-to-left {
+    0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
+@keyframes ticker-to-right {
+    0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(100%, 0, 0); }
+}
+
+
+.home {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+}
+
+.title {
+    display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+    height: 100%;
+	  font-size: 1.2em;
+    font-weight: 500;
+}
+
+
+.mytitle {
+    font-family: 'Averia Serif Libre' ;
+    font-weight: 800;
+    color: rgb(88, 33, 33);
+    letter-spacing: 3px;
+	  font-size: 6rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mysubtitle {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-style: italic;
+  margin: 20px;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: rgb(112, 24, 93);
+
+}
+    
+span {
+        color: #fff;
+        -webkit-text-stroke-width: 4px;
+        -webkit-text-stroke-color: #000;
+}
+    
+        
+span:hover {
+            -webkit-text-stroke-color: rgb(226, 10, 179);
+ }
+    
+nav {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 1.2em;
+
+ }
+
+.nav-link:hover {
+   color:  rgb(226, 10, 179) !important;
+}
+
+
+.footer {
+  margin-top: 80px;
+}
+
